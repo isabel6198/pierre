@@ -85,6 +85,71 @@ input[type="radio"] {
     border-radius: 5px;
 }
 
+-- Importation Google Font (à mettre au TOUT DÉBUT de style.css) --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- Variables de couleur (facilite les changements) --- */
+:root {
+    --primary-color: #1abc9c; /* Vert émeraude / Turquoise */
+    --secondary-color: #16a085; /* Vert plus foncé */
+    --light-bg: #f8f9fa;      /* Fond très clair */
+    --medium-bg: #e9ecef;     /* Fond moyen (pour questions) */
+    --dark-text: #2c3e50;     /* Texte principal foncé */
+    --light-text: #ffffff;    /* Texte clair (boutons...) */
+    --border-color: #dee2e6;   /* Couleur de bordure discrète */
+}
+
+/* --- Styles Généraux --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg); /* Gardez une couleur de fond au cas où l'image ne charge pas */
+    color: var(--dark-text);
+    line-height: 1.7;
+    margin: 0;
+    padding: 20px;
+
+    /* --- AJOUT POUR L'IMAGE DE FOND --- */
+    background-image: url('images/fond.jpg'); /* Chemin vers VOTRE image */
+    background-size: cover; /* Couvre toute la page */
+    background-position: center center; /* Centre l'image */
+    background-repeat: no-repeat; /* Ne répète pas l'image */
+    background-attachment: fixed; /* L'image reste fixe au défilement (effet parallax) */
+    /* --- Fin de l'ajout --- */
+}
+
+/* Vous pourriez vouloir rendre le conteneur principal légèrement transparent */
+/* pour mieux voir le fond, mais attention à la lisibilité ! */
+/* .container { */
+    /* background: rgba(255, 255, 255, 0.95); /* Blanc avec 95% d'opacité */ */
+    /* ... autres styles du container ... */
+/* } */
+
+
+.container {
+    max-width: 750px; /* Un peu plus large peut-être */
+    margin: 40px auto;
+    background: var(--light-text);
+    padding: 30px 40px; /* Plus d'espace intérieur */
+    border-radius: 12px; /* Coins plus arrondis */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée */
+    border: 1px solid var(--border-color);
+}
+
+h1 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700; /* Police plus épaisse pour le titre */
+    font-size: 2em; /* Taille un peu plus grande */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 30px 0;
+}
+
 #result-section h3 {
     text-align: center;
 }
@@ -101,3 +166,5 @@ input[type="radio"] {
     color: #555;
     padding: 20px;
 }
+
+/* -
